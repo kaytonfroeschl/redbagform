@@ -1,0 +1,59 @@
+type SponsorPreferences @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  InfantBoy: Boolean
+  InfantGirl: Boolean
+  InfantNoPref: Boolean
+  InfantBoyNum: Int
+  InfantGirlNum: Int
+  InfantNoPrefNum: Int
+  Sponsor: Sponsor @belongsTo
+  ElementaryBoy: Boolean
+  ElementaryGirl: Boolean
+  ElementaryNoPref: Boolean
+  ElementaryBoyNum: Int
+  ElementaryGirlNum: Int
+  ElementaryNoPrefNum: Int
+  MiddleSchoolBoy: Boolean
+  MiddleSchoolGirl: Boolean
+  MiddleSchoolNoPref: Boolean
+  MiddleSchoolBoyNum: Int
+  MiddleSchoolGirlNum: Int
+  MiddleSchoolNumNoPref: Int
+  HighSchoolBoy: Boolean
+  HighSchoolGirl: Boolean
+  HighSchoolNoPref: Boolean
+  HighSchoolBoyNum: Int
+  HighSchoolGirlNum: Int
+  HighSchoolNoPrefNum: Int
+  AgingOutBoy: Boolean
+  AgingOutGirl: Boolean
+  AgingOutNoPref: Boolean
+  AgingOutBoyNum: Int
+  AgingOutGirlNum: Int
+  AgingOutNoPrefNum: Int
+  NoPrefBoy: Boolean
+  NoPrefGirl: Boolean
+  NoPref: Boolean
+  NoPrefBoyNum: Int
+  NoPrefGirlNum: Int
+  NoPrefNum: Int
+  TotalNumChildren: Int
+}
+
+type Sponsor @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  FirstName: String
+  LastName: String
+  Email: AWSEmail
+  PhoneNumber: AWSPhone
+  Address: String
+  Address2: String
+  City: String
+  State: String
+  Zipcode: String
+  ReturningSponsor: Boolean
+  InfoChanged: Boolean
+  SponsorChildren: SponsorPreferences @hasOne
+  RedBagLadyPickUp: String
+}
+ 
