@@ -9,13 +9,13 @@ import SubmittedPage from './pages/SubmittedPage';
 function App(){
   return(
      <div>
-      <Link to="/sponsor-information">Go to Sponsor Information Page </Link>
+      <Link to="/">Go to Sponsor Information Page </Link>
       <Link to="/sponsor-preference">Go to Sponsor Preference Page </Link>
       <Link to="/pickup-location">Go to Pick Up Page </Link>
       <Link to="/review">Go to Review Page </Link>
       <Link to="/submitted">Go to Submitted Page </Link>
       <div>
-        <Route path="/sponsor-information">
+        <Route path="/">
           <InfoPage/>
         </Route> 
         

@@ -1,5 +1,7 @@
 import { useContext } from 'react';
+import * as React from "react";
 import NavigationContext from '../context/navigation';
+import '../style/LinkStyle.css';
 
 function Link({ to, children }) {
   const { navigate } = useContext(NavigationContext);

@@ -841,15 +841,7 @@ export default function SponsorCreateForm(props) {
         <Flex
           gap="15px"
           {...getOverrideProps(overrides, "RightAlignCTASubFlex")}
-        >
-          <Button
-            children="Submit"
-            type="submit"
-            variation="primary"
-            isDisabled={Object.values(errors).some((e) => e?.hasError)}
-            {...getOverrideProps(overrides, "SubmitButton")}
-          ></Button>
-        </Flex>
+        ></Flex>
       </Flex>
     </Grid>
   );
